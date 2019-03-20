@@ -3,7 +3,6 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
-@import url("https://webjeda.com/cards/css/main.css");
 
 // Our variables
 $base-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -46,10 +45,10 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-/*@import
+@import
         "_sass/bootstrap-readable",
         "_sass/layout",
         "_sass/custom",
         "_sass/syntax-highlighting"
 ;
-*/
+
