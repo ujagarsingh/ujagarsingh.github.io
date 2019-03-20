@@ -45,9 +45,9 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-/*@import
-        "bootstrap-readable",
-        "layout",
-        "custom",
-        "syntax-highlighting"
-;*/
+@import
+        "_sass/bootstrap-readable",
+        "_sass/layout",
+        "_sass/custom",
+        "_sass/syntax-highlighting"
+;
