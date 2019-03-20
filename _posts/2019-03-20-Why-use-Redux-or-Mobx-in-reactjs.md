@@ -4,7 +4,6 @@ title: Why use Redux or Mobx in Reactjs
 img: react-redux-mobx.png
 ---
 
-# Why use Redux or Mobx in Reactjs
 https://blog.logrocket.com/why-use-redux-reasons-with-clear-examples-d21bffd5835
 
 यह 2018 है, Software विकास में उपयोग करने के लिए कई नए libraries और tools के साथ एक समय। tool और libraries की संख्या के साथ, (एक Javascript libraries  शायद इसे पढ़ने से पहले जारी किया गया था), यह वास्तव में लाभों को समझने के बिना या आपको इसका उपयोग क्यों करना चाहिए, हर नए पर कूदने के लिए सबसे समझदार बात नहीं हो सकती है।
