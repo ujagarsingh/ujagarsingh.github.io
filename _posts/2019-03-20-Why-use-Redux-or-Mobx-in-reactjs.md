@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Documentation
+title: Why use Redux or Mobx in Reactjs
 img: react-redux-mobx.png
 ---
 
