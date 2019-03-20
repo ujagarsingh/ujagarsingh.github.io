@@ -9,7 +9,7 @@
 title: Javascript in Hindi
 email: ujagar.singh.meena@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Webjeda Cards is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
+  This is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
   
   
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -23,8 +23,8 @@ default-image: webjeda-logo-big.jpg # If there is no featured image in a post th
 built-by: webjeda
 
 copyright:
-   name: webjeda
-   link: 'http://blog.webjeda.com'
+   name: UjagarSingh
+   link: 'http://ujagarsingh.com'
 
 # Build settings
 markdown: kramdown
@@ -37,7 +37,7 @@ analytics: UA-83979019-1
 
 # Comments
 disqus: yes
-disqus-shortname: webjeda-demo
+disqus-shortname: ujagar-singh
 
 #social
 facebook: http://facebook.com/webjeda
