@@ -17,9 +17,9 @@ layout: compress
       </div>
     </div>
 
-    {% include footer.html %}
+    {% include {{site.baseurl}}/_pages/pagename.md %}
     
-
+    {% include footer.html %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
  {% if site.analytics %}{% include analytics.html %}{% endif %}
