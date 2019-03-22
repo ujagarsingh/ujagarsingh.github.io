@@ -59,3 +59,7 @@ sass:
 # Ruby Gems
 plugins: [jekyll-paginate, jekyll-seo-tag]
 
+# Collections
+collections:
+  staff_members:
+    people: true
