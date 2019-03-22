@@ -23,6 +23,12 @@ layout: compress
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
  {% if site.analytics %}{% include analytics.html %}{% endif %}
+    
+{% for staff_member in site.staff_members %}
+  <h2>{{ staff_member.name }} - {{ staff_member.position }}</h2>
+  <p>{{ staff_member.content | markdownify }}</p>
+{% endfor %}
+    
   </body>
 
 </html>
