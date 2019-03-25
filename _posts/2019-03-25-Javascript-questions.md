@@ -34,7 +34,7 @@ JavaScript is faster. JavaScript is a client-side language and thus it does not 
 
 ## 6. What is negative infinity?
 
-Negative ** Infinity ** is a number in JavaScript which can be derived by dividing negative number by zero.
+Negative **Infinity** is a number in JavaScript which can be derived by dividing negative number by zero.
 
 ## 7. Is it possible to break JavaScript Code into several lines?
 
