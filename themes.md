@@ -3,13 +3,13 @@ layout: default
 title: Jekyll Themes
 ---
 
-{% for themes in site.themes %}
+{% for themes in site.js-in-hindi %}
 
 
-<a href="{{ themes.url | prepend: site.baseurl }}">
-        <h2>{{ themes.title }}</h2>
+<a href="{{ js-in-hindi.url | prepend: site.baseurl }}">
+        <h2>{{ js-in-hindi.title }}</h2>
 </a>
 
-<p class="post-excerpt">{{ themes.description | truncate: 160 }}</p>
+<p class="post-excerpt">{{ js-in-hindi.description | truncate: 160 }}</p>
 
 {% endfor %}   
