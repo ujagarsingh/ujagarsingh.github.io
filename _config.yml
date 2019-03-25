@@ -61,5 +61,10 @@ plugins: [jekyll-paginate, jekyll-seo-tag]
 
 # Collections
 collections:
-  staff_members:
-    people: true
+    themes:
+        output: true
+        permalink: /jekyll-themes/:path/
+        
+    designs:
+        output: true
+        permalink: /my-designs/:path/
