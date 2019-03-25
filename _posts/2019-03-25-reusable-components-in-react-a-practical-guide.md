@@ -9,7 +9,7 @@ categories: [one, two]
 
 [Original Article](https://blog.bitsrc.io/reusable-components-in-react-a-practical-guide-ec15a81a4d71)
 
-आम तौर पर vanilla Javascript में, जब हम किसी code का फिर से उपयोग (re-use) करना चाहते हैं, तो हम इसे एक Function के रूप में लिखते हैं। *हालांकि, ReactJs में, हम एक component के रूप में अपना code लिखते हैं।* इसके लिए हमें  बस एक class बनाना होगा और फिर जहाँ हम चाहते हैं उस class के कई उदाहरण (instances) रख सकते हैं । 
+आम तौर पर vanilla Javascript में, जब हम किसी code का फिर से उपयोग (re-use) करना चाहते हैं, तो हम इसे एक Function के रूप में लिखते हैं। **हालांकि, ReactJs में, हम एक component के रूप में अपना code लिखते हैं।** इसके लिए हमें  बस एक class बनाना होगा और फिर जहाँ हम चाहते हैं उस class के कई उदाहरण (instances) रख सकते हैं । 
 
 हालांकि, कुछ मामलों को छोड़कर यह काम बहुत आसान है। 
 
