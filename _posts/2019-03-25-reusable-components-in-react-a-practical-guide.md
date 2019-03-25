@@ -3,7 +3,7 @@ layout: post
 title:  "Reusable Components in React a Practical Guide"
 date:   2019-03-25 10:51:47 +0530
 categories: jekyll update
-img: image-1.png
+img: re-usable-component.jpg
 categories: [one, two]
 ---
 
