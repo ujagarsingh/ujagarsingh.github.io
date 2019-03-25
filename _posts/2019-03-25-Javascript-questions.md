@@ -40,16 +40,19 @@ Negative **Infinity** is a number in JavaScript which can be derived by dividing
 
 Breaking within a string statement can be done by the use of a backslash, '\', at the end of the first line
 
-Example:
+**Example:**
 
+```javascript
 document.write("This is \a program");
+```
 And if you change to a new line when not within a string statement, then javaScript ignores break in line.
 
-Example:
-
+**Example:**
+```javascript
 var x=1, y=2,
 z=
 x+y;
+```
 The above code is perfectly fine, though not advisable as it hampers debugging.
 
 ## 8. Which company developed JavaScript?
@@ -63,7 +66,7 @@ Undeclared variables are those that do not exist in a program and are not declar
 Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.
 
 ## 10. Write the code for adding new elements dynamically?
-
+```html
 <html> 
 <head> 
 <title>t1</title> 
@@ -74,11 +77,12 @@ Undefined variables are those that are declared in the program but have not been
 </script> </head> 
 <body> <p id="firstP">firstP<p> </body> 
 </html>
+```
 ## 11. What are global variables? How are these variable declared and what are the problems associated with using them?
 
 Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.
 
-Example:
+**Example:**
 
 // Declare a global globalVariable = "Test";
 
@@ -101,7 +105,7 @@ The setTimeout(function, delay) function is used to start a timer that calls a p
 Timers are operated within a single thread, and thus events might queue up, waiting to be executed.
 
 ## 15. Which symbol is used for comments in Javascript?
-
+```html
 // for Single line comments and
 
 /* Multi
@@ -111,7 +115,7 @@ Line
 Comment
 
 */
-
+```
 ## 16. What is the difference between ViewState and SessionState?
 
 'ViewState' is specific to a page in a session.
@@ -148,16 +152,17 @@ Using a web page and Active X objects
 ## 22. What are all the looping structures in JavaScript?
 
 Following are looping structures in Javascript:
-
+```javascript
 For
 While
 do-while loops
+```
 ## 23. What is called Variable typing in Javascript?
 
 Variable typing is used to assign a number to a variable and the same variable can be assigned to a string.
 
-Example
-
+**Example:**
+```javascript
 i = 10;
 i = "string";
 This is called variable typing.
@@ -189,7 +194,7 @@ The NULL value is used to represent no value or no object. It implies no object 
 
 The delete keyword is used to delete the property as well as its value.
 
-Example
+**Example:**
 
 var student= {age:20, batch:"ABC"};
 delete student.age;
@@ -232,7 +237,7 @@ But a Confirmation box displays two buttons namely OK and cancel.
 
 Escape characters (Backslash) is used when working with special characters like single quotes, double quotes, apostrophes and ampersands. Place backslash before the characters to make it display.
 
-Example:
+**Example:**
 
 document.write "I m a "good" boy"
 document.write "I m a \"good\" boy"
@@ -244,7 +249,7 @@ Cookies are the small test files stored in a computer and it gets created when t
 
 The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array. Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.
 
-Example:
+**Example:**
 
 var cloths = ["Shirt", "Pant", "TShirt"];
 cloths.pop();
@@ -348,7 +353,7 @@ obj.class = 12;
 
 Strict Mode adds certain compulsions to JavaScript. Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, but might be problematic and potentially unsafe. Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.
 
-Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given example:
+Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given **Example:**
 
 function myfunction() {
     "use strict";
@@ -376,7 +381,7 @@ onDocumentReady loads the code just after the DOM is loaded. This allows early m
 
 Closure is a locally declared variable related to a function which stays in memory when the function has returned.
 
-For example:
+For **Example:**
 
 function greet(message) {
 
@@ -556,7 +561,7 @@ The output is shown below:
 
 The escape () function is responsible for coding a string so as to make the transfer of the information from one computer to the other, across a network.
 
-For Example:
+For **Example:**
 
 <script>
 	document.write(escape("Hello? How are you!"));
@@ -565,7 +570,7 @@ Output: Hello%3F%20How%20are%20you%21
 
 The unescape() function is very important as it decodes the coded string.
 
-It works in the following way. For example:
+It works in the following way. For **Example:**
 
 <script>
 	document.write(unescape("Hello%3F%20How%20are%20you%21"));
