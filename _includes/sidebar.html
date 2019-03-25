@@ -11,11 +11,14 @@
         <div class="mt10 recent">
             <h2>Recent articles</h2>        
              <ul>
-                {% for post in site.related_posts limit:3 %}
+                {% for post in site.related_posts limit:5 %}
 
                       <li>
-                      <p><img width="100" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
-                              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      <p><a href="{{ post.url | prepend: site.baseurl }}">
+                              <img width="100" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                              </a>
+                         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                         <br/><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
                       </li>
 
                 {% endfor %}
