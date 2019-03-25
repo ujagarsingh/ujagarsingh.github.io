@@ -20,7 +20,7 @@ default-image: webjeda-logo-big.jpg # If there is no featured image in a post th
 
 #footer
 
-built-by: webjeda
+built-by: JS In Hindi
 
 copyright:
    name: UjagarSingh
@@ -40,17 +40,17 @@ disqus: yes
 disqus-shortname: www-ujagarsingh-com
 
 #social
-facebook: http://facebook.com/webjeda
-quora: http://quora.com/sharathdt
-twitter: http://twitter.com/@webjeda
-github: http://github.com/webjeda
-email: hello@webjeda.com
+facebook: http://facebook.com/ujagar.singh.meena
+quora: http://quora.com/ujagar.singh.meena
+twitter: http://twitter.com/@ujagar.singh.meena
+github: http://github.com/ujagar.singh.meena
+email: ujagar.singh.meena@gmail.com
 
 #facebook like box
 fb-like-box: yes
 fb-app-id: 549480635219583
-fb-page-url: https://www.facebook.com/webjeda/
-fb-page-title: webjeda
+fb-page-url: https://www.facebook.com/ujagar.singh.meena/
+fb-page-title: Js in Hindi
 
 # Sass style
 sass:
