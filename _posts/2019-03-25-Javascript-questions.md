@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Installation"
-categories: jekyll update
+title:  "Top 85 JavaScript Interview Questions & Answers"
+categories: Javascript
 img: image-3.png
 categories: one
 ---
