@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-06-13 10:51:47 +0530
+title:  "Reusable Components in React a Practical Guide"
+date:   2019-03-25 10:51:47 +0530
 categories: jekyll update
 img: image-1.png
 categories: [one, two]
