@@ -61,4 +61,6 @@ plugins: [jekyll-paginate, jekyll-seo-tag]
 
 # Collections
 collections:
-    - tutorial
+    tutorial:
+        output: true
+        permalink: /tutorial/:path/
