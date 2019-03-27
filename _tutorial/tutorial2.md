@@ -1,5 +1,5 @@
 ---
-layout: Tutorial 1
+layout: default
 description: Webjeda Purple is a minimal theme built on default jekyll theme. It is very light highly customizable. Suitable for minimal blogs. Webjeda Purple is a minimal theme built on default jekyll theme. It is very light highly customizable. Suitable for minimal blogs. Webjeda Purple is a minimal theme built on default jekyll theme. It is very light highly customizable. Suitable for minimal blogs.
 ---
 
