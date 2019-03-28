@@ -1,4 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css?family=Raleway:400,700"); */
+@import url('https://fonts.googleapis.com/css?family=Martel');
 /*!
  * bootswatch v3.3.6
  * Homepage: http://bootswatch.com
@@ -13,10 +14,11 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: 'Martel', serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+body{font-family: 'Martel', serif;}
 body {
   margin: 0;
 }
