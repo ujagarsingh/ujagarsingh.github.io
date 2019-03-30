@@ -13,13 +13,19 @@
              <ul>
                 {% for post in site.related_posts limit:5 %}
 
-                      <li>
-                      <p><a href="{{ post.url | prepend: site.baseurl }}">
+                  <li class="mb-2">
+                      <div class="row">
+                         <div class="col-3">
+                              <a href="{{ post.url | prepend: site.baseurl }}">
                               <img width="100" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
                               </a>
-                         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                         <br/><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
-                      </li>
+                         </div>
+                         <div class="col-9">
+                             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                             <br/><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small>
+                         </div>
+                      </div>
+                  </li>
 
                 {% endfor %}
               </ul>
