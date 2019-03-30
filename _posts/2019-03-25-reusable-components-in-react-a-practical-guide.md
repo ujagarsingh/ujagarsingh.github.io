@@ -6,8 +6,7 @@ categories: Reactjs, Javascript
 img: re-usable-component.jpg
 categories: [Reactjs, Javascript]
 ---
-
-[Original Article](https://blog.bitsrc.io/reusable-components-in-react-a-practical-guide-ec15a81a4d71)
+[Source](https://blog.bitsrc.io/reusable-components-in-react-a-practical-guide-ec15a81a4d71)
 
 आम तौर पर Javascript में, जब हम किसी code का फिर से उपयोग  अर्थात (re-use) करना चाहते हैं, तो हम इसे एक Function के रूप में लिखते हैं। **हालांकि, ReactJs में, हम एक component के रूप में अपना code लिखते हैं।** इसके लिए हम  एक class बनाते हैं  और फिर जहाँ हम चाहें वहाँ उस class का instances (उदाहरण ) रखते हैं । 
 
@@ -95,9 +94,10 @@ export default App;
 
 यहाँ  `props` एक  object है जिसमें  'msg' एक property है। `App` compnent के अंदर, मैं {helloWorld} को {message} को भी बदल दिया है  (replace) । इस 'message' variable के अंदर, मैं कुछ text के साथ  'msg' `props` को defining कर रहा हूं । 
 
-इस प्रकार  एक simple, re-usable React component बन गया है। मैंने यहाँ एक function में  कुछ "JSX" लिखी है, और text को  render करने के लिए एक function को  call किया है। 
+इस प्रकार  एक simple, re-usable React component बन गया है। मैंने यहाँ एक function `message`  में  कुछ "JSX" लिखी है, और text को  render करने के लिए एक function `message` को  call किया है। 
 
-लेकिन  इस तरह  यदि किसी Function की calling की जाए, तो  नहीं होती है और यहाँ तक की JSX से भी नहीं करता है। इसलिए  Function को  dynamically जोड़ने के लिए इस Function को JSX में बदलना होगा। ( यहाँ "message" एक function है  ) इसलिए हम JSX को परिवर्तित करने के लिए React.createElement के साथ शुरुआत करेंगे  । यहाँ  हम जिस element को render करना चाहते हैं  उसके  लिए React.createElement में  एक string और एक Function ले सकते हैं। 
+लेकिन  वास्तव मैं , इस तरह  यदि किसी Function की calling की जाए, तो   Function भी JSX की तरह  rendering नहीं करता है। इसलिए  हमें Function `message` को ही  JSX में बनाना  होगा। ( यहाँ "message" एक function है  ) इसलिए हम आसानी सा समझ ने के लिए React.createElement के साथ शुरु करेंगे । 
+**Note:** यहाँ  हम जिस element को render करना चाहते हैं  उसके  लिए React.createElement में  string के साथ-साथ  Function भी ले सकते हैं। 
 
 ```javascript
 import React, {Component} from 'react';
@@ -121,7 +121,7 @@ class App extends Component {
 export default App;
 ```
 
-यह Function को `props` pass करेगा, और  Function संभवतः कुछ और element देगा। यहां, `message` Function एक <div className="well"> प्रदान कर रहा है। लेकिन यह बहुत जटिल लगता है। इसे और सरल बनाया जा सकता है जैसे :- 
+यह Function को `props` pass करेगा, और  Function संभवतः कुछ और `element` return करेगा । यहां, `message` Function एक <div className="well"> return कर रहा है। लेकिन यह बहुत जटिल (Complex) दिखाई दे रहा  है। इसे थोड़ा ओर आसान  बनाया जा सकता है जैसे :- 
 
 ```javascript
 import React, {Component} from 'react';
@@ -145,7 +145,7 @@ export default App;
 
 यहां, मैं अपने `message` Function को `Message` में बदल रहा हूं, और इस Function को एक component में बदल रहा हूं। ऐसा करके, मैं इसे app component के अंदर एक self-closing element के रूप में उपयोग कर सकता हूं जैसा कि उपरोक्त code में दिखाया गया है। 
 
-यदि मैं `msg` prop को `children` prop में बदलता हूं, तो ReactJs अभी भी उसी तरह render करेगा। मैं एक `Message` तत्व को दूसरे `Message` के अंदर भी रख सकता हूं जैसे :- 
+यदि मैं `msg` prop को `children` prop में बदल दूंगा, तो भी ReactJs उसी तरह render करेगा जैसा पहले कर रहा था । मैं एक `Message` element को दूसरे `Message` के अंदर भी रख सकता हूं जैसे :- 
 
 ```javascript
 class App extends Component {
@@ -160,12 +160,14 @@ class App extends Component {
 }
 ```
 
-तो, reactJs में एक re-usable component बनाने के लिए, हमें  बस एक ऐसा function बनाना  होगा, जिसमें पहला अक्षर एक कैपिटल लेटर (Capital Letter ) हो। इस Function को `props` को एक argument के रूप में प्राप्त करना होगा  और हम इन `props` का उपयोग इसमें कर सकते हैं जो कि हमें  अपने re-usable component से  return चाहते हैं। 
+तो इस प्रकार , reactJs में एक re-usable component बनाने के लिए, हम बस एक ऐसा function बनाते हैं , जिसमें पहला अक्षर एक कैपिटल लेटर (Capital Letter ) हो। इस Function के  `props` को एक argument के रूप में प्राप्त (get) करते हैं  और हम इन `props` का उपयोग वहां कर सकते हैं जहाँ  जगह हम  अपने re-usable component से  return चाहते हैं। 
 
-##### कार्यात्मक componentों का उपयोग करना 
-यदि आपके component का एकमात्र उद्देश्य केवल कुछ डेटा प्रदर्शित करना है, तो मैं आपको उस component को वर्ग component के बजाय कार्यात्मक component के रूप में लिखने का सुझाव दूंगा। 
+#####  Functional components का उपयोग  :
+यदि आपके component का एकमात्र उद्देश्य केवल कुछ डेटा प्रदर्शित करना है, तो मैं आपको उस component को Class component के बजाय Functional component के रूप में लिखने का सुझाव दूंगा। 
 
-यहां बताया गया है कि एक विशिष्ट वर्ग component को एक कार्यात्मक component में कैसे बदला जा सकता है: 
+निम्नलिखित तरीके से  एक  Class component को एक Functional component में बदला जा सकता है: 
+
+**उदाहरण : Class Component**
 
 ```javascript
 class Hero extends React.Component {
@@ -177,18 +179,30 @@ class Hero extends React.Component {
 }
 ```
 
-एक कार्यात्मक एक में component, हमें मिलता है: 
+**उदाहरण : Converted Functional Component **
 
 ```javascript
 const Hero = () => <div>Functional Components are so simple!</div>
 ```
 
-ये दोनों स्निपेट एक ही हीरो component को परिभाषित कर रहे हैं। फर्क सिर्फ इतना है कि दूसरा तरीका छोटा और सरल है। कार्यात्मक componentों का उपयोग करके, हम JSX टेम्पलेट के अंदर किसी भी प्रॉपर तक पहुंचने के लिए इसका उपयोग करने के बारे में भी भूल सकते हैं। 
+ये दोनों snippets (small code blocks) एक ही "Hero" component को परिभाषित कर रहे हैं। फर्क सिर्फ इतना है कि दूसरा तरीका छोटा और सरल है। ध्यान रहे , Functional components का उपयोग करते समय , हम JSX template मैं  किसी  `props` का  उपयोग करते समय  `this` keyword का  उपयोग करना भूल भी सकते हैं  । 
 
-सुनिश्चित करें कि हम केवल कुछ स्थितियों में कार्यात्मक componentों का उपयोग करते हैं। ऐसी स्थिति तब होती है जब आपका component केवल कुछ डेटा प्रदर्शित कर रहा होता है। 
+सुनिश्चित करें कि हम कुछ खास स्थितियां में ही Functional components का उपयोग करना  हैं। ऐसी स्थिति तब होती है जब आपका component केवल कुछ data ही प्रदर्शित कर रहा होता है। 
 
 ##### Fragments
-टुकड़े प्रतिक्रिया component के अंदर एक एकल मूल तत्व के लिए यह कष्टप्रद आवश्यकता है। 
+मान लीजिये की, Reactjs के में  component के अंदर single parent element के लिए यह  आवश्यकता है। 
+
+```javascript
+class Login extends React.Component {
+  render() {
+    return (
+        <input name="login"/>
+        <input name="password"/>
+    )
+  }
+}
+```
+यह एक error है। इस समस्या को हल करने के लिए, हम एक simple <div> element को इस तरह से पहले कोड में जोड़ सकते हैं:
 
 ```javascript
 class Login extends React.Component {
@@ -203,22 +217,7 @@ class Login extends React.Component {
 }
 ```
 
-But now, React 16 has provided us with a new syntax called Fragments. Fragments allow us to replace the useless parent div element with a React.Fragment.
-
-```javascript
-class Login extends React.Component {
-  render() {
-    return (
-      <div>
-        <input name="login"/>
-        <input name="password"/>
-      </div>
-    )
-  }
-}
-```
-
-But this can be considered to be worse than writing div. So React has provided us with this short hand syntax for Fragment as well.
+लेकिन अब, React 16 में  हमें एक नया syntax प्रदान किया गया है जिसे **Fragments** कहा जाता है। Fragments से हम  एक फालतू की  parent `<div>` element के स्थान पर  `<React.Fragment>` का  use कर सकते  हैं।
 
 ```javascript
 class Login extends React.Component {
@@ -232,32 +231,56 @@ class Login extends React.Component {
   }
 }
 ```
+लेकिन इसे <div> लिखने से भी बुरा माना जा सकता है। इसलिए React ने हमें Fragment के साथ साथ  इसका  short hand syntax भी प्रदान किया है।
+
+```javascript
+class Login extends React.Component {
+  render() {
+    return (
+      <>
+        <input name="login"/>
+        <input name="password"/>
+      </>
+    )
+  }
+}
+```
 
 ##### State
-state किसी भी प्रतिक्रिया एप्लिकेशन में एक महत्वपूर्ण भूमिका निभाता है, और इसलिए यह बहुत महत्वपूर्ण है कि डेवलपर्स सावधान रहें जब वे इसके साथ काम कर रहे हों।
+state किसी भी React Application में एक महत्वपूर्ण भूमिका निभाता है, और इसलिए यह बहुत महत्वपूर्ण है कि Developers जब वे इसके साथ काम कर रहे हों तो सावधान रहें ।
 
-लेखन state का प्रारंभिक चरण काफी सरल है, हम कक्षा के रेंडर के अंदर एक कंस्ट्रक्टर विधि बनाते हैं और इसके अंदर state को इनिशियलाइज़ करते हैं।
+शुरुआत में state को लिखना  काफी आसान है, हम Class के `render` के अंदर एक `constructor` method बनाते हैं और इसके अंदर state को initialize करते हैं।
 
-फिर, जब आप एप्लिकेशन को state को update करना चाहते हैं, तो आप सेटस्ट्रेट विधि का उपयोग करते हैं।
+फिर, जब हम  Application की  state को update करना चाहते हैं, तो आप `setState` method का उपयोग करते हैं।
 
-एक चीज जो हमें करने से बचने की आवश्यकता है वह इस का उपयोग कर रहा है। यह इस तरह से सेटस्ट्रेट विधि के अंदर होता है:
+setState method मैं  हमें  `this.state` और  `this.props` का उपयोग  करने से बचने की आवश्यकता होती है | 
 
 ```javascript
 this.setState({ name: this.state.name, name});
 ```
 
-इसके बजाय हम जो कर सकते हैं वही state पहले की तरह ही रखें, और हमारे state में केवल नई नाम संपत्ति जोड़ें।
+इसके बजाय  हमें  state को  यथावत  (पहले की तरह ही) रखनी चाहिए , और हमारे state में केवल new `name` property को और जोड़ देंगे ।
 
 ```javascript
 this.setState({...this.state, name});
 ```
 
-यह क्यों इतना महत्वपूर्ण है? क्योंकि सेटस्टैट प्रकृति में अतुल्यकालिक है, क्योंकि हमारे state के update DOM जोड़तोड़ को अनुकूलित करने के लिए बैचबद्ध हैं।
+क्या आपने कभी सोचा कि, यह इतना महत्वपूर्ण क्यों  है? क्योंकि `setState` default रूप से  Asynchronous है, क्योंकि  reactjs स्वयं   application की  state के update होते ही  DOM भी  update करता  है ।
+
+##### Difference between Synchronous and Asynchronous: 
+
+जब कोई Calling Method किसी Method को Call करता है और उस Method के पूरी तरह से Execute हो जाने का Wait करता है तथा जब वह Method पूरी तरह से Execute हो जाता है, तब वह Calling Method आगे बढता है, तो इस प्रकार की Programming को Synchronous Programming कहते हैं और इस प्रकार के सभी Methods को Synchronous Method कहते हैं।
+
+किसी भी Program का ये Default Behavior होता है और Multi-Threading के इस Chapter के अलावा हमने पिछले Chapter तक जितने भी Programs Create किए हैं, वे सभी Synchronous Program के Examples हैं।
+
+लेकिन जब कोई Calling Method जिस Method को Call करता है, उस Method के पूरी तरह से Completely Execute होने का Wait नहीं करताए बल्कि Method को Call करके अपने स्वयं के अगले Codes को Process करने लगता है, तो इस प्रकार के Program को Asynchronous Program कहते हैं और इस तरह का Method, जिसके Complete होने के लिए Calling Method Wait नहीं करताए Asynchronous Method कहलाता है।
+
+यानी Asynchronous Method अपना काम पूरा करने से पहले ही Program Control को Calling Method में Return कर देता है ताकि Calling Method के अन्‍य Statements का Execution हो सके।
 
 ##### Controlled/Uncontrolled Components
-प्रतिक्रिया में, HTML फॉर्म एलिमेंट अन्य DOM एलिमेंट्स से थोड़ा अलग काम करते हैं। ऐसा इसलिए है क्योंकि अन्य DOM तत्वों के विपरीत, फार्म तत्व कुछ आंतरिक स्थिति रखते हैं। उदाहरण के लिए, सादे HTML में यह फ़ॉर्म एक ही नाम स्वीकार करता है:
+ReactJs में, HTML form element अन्य DOM elements से थोड़ा अलग  तरीके से  काम करता है | क्योंकि अन्य DOM elements के विपरीत, form element कुछ internal state भी  रखते हैं। उदाहरण के लिए, साधारण  HTML में निम्न लिखित   form एक ही name स्वीकार (accept) करता है :
 
-```javascript
+```html
 <form>
   <label>
     Name:
@@ -267,14 +290,15 @@ this.setState({...this.state, name});
 </form>
 ```
 
-जब उपयोगकर्ता प्रपत्र को सबमिट करता है तो इस फ़ॉर्म में नए पृष्ठ पर नेविगेट करने का डिफ़ॉल्ट HTML फॉर्म व्यवहार होता है। यदि आप इस व्यवहार को प्रतिक्रिया में चाहते हैं, तो यह काम करता है। लेकिन ज्यादातर मामलों में, जावास्क्रिप्ट फ़ंक्शन के लिए सुविधाजनक है जो फ़ॉर्म को प्रस्तुत करने के लिए संभालता है और उस डेटा तक पहुंच प्राप्त करता है जो उपयोगकर्ता फॉर्म में दर्ज करता है। इसे प्राप्त करने का मानक तरीका "नियंत्रित componentों" नामक एक तकनीक के साथ है।
+जब उपयोगकर्ता (user) form को submit करता है तो इस form में नए page पर जाने का  डिफ़ॉल्ट HTML Form व्यवहार (behavior) होता है। या यों कहें की submit करते ही by default `new page` पर जाता है | यदि आप इस व्यवहार को ReactJs में चाहते हैं, तो यह काम करता है। लेकिन ज्यादातर मामलों में,  इसके लिए एक javascript function का उपयोग  सुविधाजनक रहता है जो form के  submttion को संभालता है और  user द्वारा  Form में दर्ज किये गए  data तक पहुंच (access) प्राप्त करता है। इसे कार्य  करने का stendard तरीका  एक तकनीक के साथ  है। जिसे  `Controlled Components` नामक  है।
 
-नियंत्रित componentों का विकल्प, अनियंत्रित component कहलाता है! अनियंत्रित component एक ऐसी विधि है जहां फॉर्म डेटा को स्वयं डोम द्वारा नियंत्रित किया जाता है।
+Controlled Components का विपरीत , Uncontrolled component कहलाता है! Uncontrolled component एक ऐसी विधि (method) है जहां Form Data को स्वयं DOM द्वारा नियंत्रित किया जाता है।
 
 ####  Controlled Components
-HTML में, `<input>`, `<textarea>`, और `<select>` जैसे तत्व आमतौर पर अपनी स्थिति बनाए रखते हैं और इसे उपयोगकर्ता इनपुट के आधार पर update करते हैं। प्रतिक्रिया में, उत्परिवर्तनीय स्थिति को आमतौर पर components की state संपत्ति में रखा जाता है, और केवल setState() के साथ update किया जाता है।
+सामान्यतया HTML में `<input>`, `<textarea>`, और `<select>` जैसे element अपनी state को  maintain रखते हैं और इसे user के  input के आधार पर update करते हैं।  ReactJs में, 
+परिवर्तनीय (mutable) state को आमतौर पर components की state property में रखा जाता है, और जिसे केवल setState() से ही update किया जाता है।
 
-हम ReactJs state को "सत्य का एकल स्रोत" बनाकर दोनों को जोड़ सकते हैं। फिर ReactJs component जो किसी प्रपत्र को प्रस्तुत करता है, यह भी नियंत्रित करता है कि बाद के उपयोगकर्ता इनपुट पर उस रूप में क्या होता है। एक इनपुट फॉर्म एलिमेंट जिसका मान ReactJs द्वारा इस तरह नियंत्रित किया जाता है, उसे "नियंत्रित component" कहा जाता है।
+हम ReactJs state को "सत्य का एकल स्रोत (single source of truth)" बनाकर दोनों को जोड़ सकते हैं। फिर ReactJs component जो किसी प्रपत्र को प्रस्तुत करता है, यह भी नियंत्रित करता है कि बाद के उपयोगकर्ता इनपुट पर उस रूप में क्या होता है। एक इनपुट Form element जिसका मान ReactJs द्वारा इस तरह नियंत्रित किया जाता है, उसे "नियंत्रित component" कहा जाता है।
 
 ```javascript
 class NameForm extends React.Component {
@@ -310,7 +334,7 @@ class NameForm extends React.Component {
 ```
 
 #### Uncontrolled Components
-एक अनियंत्रित component लिखने के लिए, हर state के update के लिए एक इवेंट हैंडलर लिखने के बजाय, आप DOM से फॉर्म वैल्यू पाने के लिए रेफरी का उपयोग कर सकते हैं।
+एक अनियंत्रित component लिखने के लिए, हर state के update के लिए एक इवेंट हैंडलर लिखने के बजाय, आप DOM से Form वैल्यू पाने के लिए रेफरी का उपयोग कर सकते हैं।
 
 ```javascript
 class NameForm extends React.Component {
