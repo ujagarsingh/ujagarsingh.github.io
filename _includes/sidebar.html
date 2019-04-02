@@ -15,12 +15,12 @@
 
                   <li class="mb-2">
                       <div class="row">
-                         <div class="col-3">
+                         <div class="col-4">
                               <a href="{{ post.url | prepend: site.baseurl }}">
-                              <img width="100" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                              <img class="img-responsive" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
                               </a>
                          </div>
-                         <div class="col-9">
+                         <div class="col-8 pl-0">
                              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                              <br/><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small>
                          </div>
