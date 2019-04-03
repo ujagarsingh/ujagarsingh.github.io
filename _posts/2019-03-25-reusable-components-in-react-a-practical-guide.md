@@ -6,7 +6,7 @@ categories: Reactjs, Javascript
 img: re-usable-component.jpg
 categories: [Reactjs, Javascript]
 ---
-[Source](https://blog.bitsrc.io/reusable-components-in-react-a-practical-guide-ec15a81a4d71)
+[**Source** : reusable components in react a practical guide](https://blog.bitsrc.io/reusable-components-in-react-a-practical-guide-ec15a81a4d71)
 
 आम तौर पर Javascript में, जब हम किसी code का फिर से उपयोग  अर्थात (re-use) करना चाहते हैं, तो हम इसे एक Function के रूप में लिखते हैं। **हालांकि, ReactJs में, हम एक component के रूप में अपना code लिखते हैं** ।इसके लिए हम  एक class बनाते हैं  और फिर जहाँ हम चाहें वहाँ उस class का instances (उदाहरण ) रखते हैं । 
 
@@ -335,7 +335,7 @@ class NameForm extends React.Component {
 ```
 
 #### Uncontrolled Components
-एक Uncontrolled component बनाने  के लिए, state को  update करने के लिए एक event handler लिखने के बजाय, हम  DOM से Form value को  get करने  के लिए [ref](https://reactjs.org/docs/refs-and-the-dom.html) का उपयोग करते हैं।
+एक Uncontrolled component बनाने  के लिए, state को  update करने के लिए एक event handler लिखने के बजाय, हम  DOM से Form value को  get करने  के लिए [ref](https://reactjs.org/docs/refs-and-the-dom.html){:target="_blank"} का उपयोग करते हैं।
 
 ```javascript
 class NameForm extends React.Component {
