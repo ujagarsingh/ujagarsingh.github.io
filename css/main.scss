@@ -1,6 +1,12 @@
 ---
 ---
-
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "../_sass/bootstrap-readable",
+        "../_sass/layout",
+        //"../_sass/custom",
+        "../_sass/syntax-highlighting"
+;
 
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
@@ -44,11 +50,5 @@ $on-laptop:        800px;
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "../_sass/bootstrap-readable",
-        "../_sass/layout",
-        //"../_sass/custom",
-        "../_sass/syntax-highlighting"
-;
+
 
