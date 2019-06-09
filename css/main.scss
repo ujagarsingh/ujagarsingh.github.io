@@ -1,12 +1,6 @@
 ---
 ---
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "../_sass/bootstrap-readable",
-        "../_sass/layout",
-        //"../_sass/custom",
-        "../_sass/syntax-highlighting"
-;
+
 
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
@@ -33,7 +27,13 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "../_sass/bootstrap-readable",
+        "../_sass/layout",
+        //"../_sass/custom",
+        "../_sass/syntax-highlighting"
+;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
