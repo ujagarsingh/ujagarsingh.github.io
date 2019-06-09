@@ -31,9 +31,7 @@ $on-laptop:        800px;
 @import
         "../_sass/bootstrap-readable",
         "../_sass/layout",
-        //"../_sass/custom",
-        "../_sass/syntax-highlighting"
-;
+        "../_sass/syntax-highlighting";
 
 // Use media queries like this:
 // @include media-query($on-palm) {
