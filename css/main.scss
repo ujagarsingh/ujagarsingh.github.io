@@ -2,6 +2,14 @@
 ---
 
 
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "../_sass/bootstrap-readable",
+        "../_sass/layout",
+        "../_sass/syntax-highlighting";
+
+
 // Our variables
 $base-font-family: "Georgia"; //"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   18px;
@@ -26,12 +34,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "../_sass/bootstrap-readable",
-        "../_sass/layout",
-        "../_sass/syntax-highlighting";
 
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
