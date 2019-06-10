@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview
-img: react-redux-mobx.png
+img: interview.jpg
 ---
 
 ## Tell me something about yourself in brief.
